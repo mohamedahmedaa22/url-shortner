@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS short_urls (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    url TEXT NOT NULL,
+    short_code VARCHAR(10) UNIQUE NOT NULL,
+    access_count INT UNSIGNED NOT NULL DEFAULT 0,
+    created_at DATETIME NOT NULL,
+    updated_at DATETIME NOT NULL  
+);
