@@ -14,7 +14,7 @@ class ShortUrlRepository
         $now = gmdate('Y-m-d H:i:s');
 
         $stmt = $this->db->prepare(
-            'INSERT INTO short_urls (url, short_code, created_at, updated_at VALUES (:url, :short_code, :created_at, :updated_at)'
+            'INSERT INTO short_urls (url, short_code, created_at, updated_at) VALUES (:url, :short_code, :created_at, :updated_at)'
         );
 
         $stmt->execute([
