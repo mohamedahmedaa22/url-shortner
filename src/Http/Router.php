@@ -27,7 +27,7 @@ class Router
 
             if (preg_match($route['regex'], $request->path(), $matches)) {
                 $params = array_filter($matches, 'is_string', ARRAY_FILTER_USE_KEY);
-                return ($route['handler'])(...$params);
+                return ($route['handler'])($request, ...$params);   // ← add $request
             }
         }
 
